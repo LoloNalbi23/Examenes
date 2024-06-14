@@ -14,6 +14,7 @@ function setup(){
     background(0);
 
     colorPixel = [0,0,0,0];
+    nuevoColor = [0,0,0,0];
     
     for (let fila = 0; fila < img.width; fila++) {
         for (let col = 0; col < img.height; col++) {
