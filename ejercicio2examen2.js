@@ -15,13 +15,15 @@ function setup(){
 
     colorPixel = [0,0,0,0];
     nuevoColor = [0,0,0,0];
+
+    loadPixels();
     
-    for (let fila = 0; fila < img.width; fila++) {
+    for (let fila = 0; fila < img.width; fila++) {  //Escaner de pixeles
         for (let col = 0; col < img.height; col++) {
         colorPixel += img.get(fila, col);
         
         rojo = 0.393 * colorPixel[0] + 0.769 * colorPixel[1] + 0.189 * colorPixel[2]
-        verde = 0.349 * colorPixel[0] + 0.686 * colorPixel[1] + 0.168 * colorPixel[2]
+        verde = 0.349 * colorPixel[0] + 0.686 * colorPixel[1] + 0.168 * colorPixel[2]  //Hago calculo
         azul = 0.272 * colorPixel[0] + 0.534 * colorPixel[1] + 0.131 * colorPixel[2]
         
         //verifico el rojo
@@ -63,7 +65,7 @@ function setup(){
         img.set(fila,col,nuevoColor);
     }
     }
-    img.updatePixels();
+    img.updatePixels();  //subo los pixeles
 }
 function draw(){
     image(img, 0, 0);
