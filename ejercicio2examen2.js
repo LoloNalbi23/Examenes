@@ -12,6 +12,7 @@ img = loadImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVgGZb_Qy
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
+    background(0);
     
     for (let fila = 0; fila < img.width; fila++) {
         for (let col = 0; col < img.height; col++) {
@@ -20,16 +21,44 @@ function setup(){
         rojo = 0.393 * colorPixel(0) + 0.769 * colorPixel(1) + 0.189 * colorPixel(2)
         verde = 0.349 * colorPixel(0) + 0.686 * colorPixel(1) + 0.168 * colorPixel(2)
         azul = 0.272 * colorPixel(0) + 0.534 * colorPixel(1) + 0.131 * colorPixel(2)
+        
+        //verifico el rojo
+        if(rojo[0] > 255){
+            rojo[0] = 255
+        }
+        if(rojo[1] > 255){
+            rojo[1] = 255
+        }
+        if(rojo[2] > 255){
+            rojo[2] = 255
+        }
 
-        if(rojo > 255){
-            rojo = 255
+        //verifico el verde
+        if(verde[0] > 255){
+            verde[0] = 255
         }
-        if(verde > 255){
-            verde = 255
+        if(verde[1] > 255){
+            verde[1] = 255
         }
-        if(azul > 255){
-            azul = 255
+        if(verde[2] > 255){
+            verde[2] = 255
         }
+
+        //verifico el azul
+        if(azul[0] > 255){
+            azul[0] = 255
+        }
+        if(azul[1] > 255){
+            azul[1] = 255
+        }
+        if(azul[2] > 255){
+            azul[2] = 255
+        }
+
+        nuevoColor = [rojo,verde,azul];
+
+        //seteo los colores
+        img.set(fila,col,nuevoColor);
     }
     }
     img.updatePixels();
