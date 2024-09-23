@@ -53,28 +53,3 @@ let palabrac2 = [];
 let word = 'hola'                   //variables auxiliares
 let word2 = 'ala'
 isDivisible(word,word2,palabrac,palabrac01,palabrac1,palabrac2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*for (let i = 0; i < input.length; i++) {
-        let index = Abc.indexOf(LetraCode);
-
-        
-            let NextlETRA = Abc[(index + n) % Abc.length];
-            result += NextlETRA;
-        } else {
-            result += LetraCode;
-        }
-    }
-*/
