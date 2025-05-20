@@ -2,6 +2,7 @@ function isDivisible(a,b,numeros) {
     if(a%b===0){
         console.log(a/b)
         console.log(numeros.filter((n)=>n%5===0));
+        return true
     }else {
         return false;
     }
